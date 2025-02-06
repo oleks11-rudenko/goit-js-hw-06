@@ -16,8 +16,9 @@ class Storage {
   removeItem(itemToRemove) {
     if (this.#items.indexOf(itemToRemove) != -1) {
       this.#items.splice(this.#items.indexOf(itemToRemove), 1);
+    } else {
+      console.log("Такого елемента немає в масиві.");
     }
-    console.log("Такого елемента немає в масиві.");
   }
 }
 
