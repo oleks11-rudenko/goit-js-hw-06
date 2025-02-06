@@ -14,10 +14,10 @@ class Storage {
   }
 
   removeItem(itemToRemove) {
-    this.#items.splice(
-      this.#items.indexOf(itemToRemove),
-      this.#items.indexOf(itemToRemove)
-    );
+    if (this.#items.indexOf(itemToRemove) != -1) {
+      this.#items.splice(this.#items.indexOf(itemToRemove), 1);
+    }
+    console.log("Такого елемента немає в масиві.");
   }
 }
 
